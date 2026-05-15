@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<record id="product_template_kanban_stars_inherit" model="ir.ui.view">
+    <field name="name">product.template.kanban.inherit</field>
+    <field name="model">product.template</field>
+    <field name="inherit_id" ref="product.product_template_kanban_view"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='priority']" position="attributes">
+            <attribute name="widget">priority</attribute>
+            <attribute name="options">{'range': 4}</attribute>
+        </xpath>
+    </field>
+</record>
+</odoo>
