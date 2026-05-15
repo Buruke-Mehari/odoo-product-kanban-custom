@@ -12,4 +12,14 @@
         </xpath>
     </field>
 </record>
+<record id="product_template_tree_stars_inherit" model="ir.ui.view">
+    <field name="name">product.template.tree.inherit</field>
+    <field name="model">product.template</field>
+    <field name="inherit_id" ref="product.product_template_tree_view"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='priority']" position="replace">
+            <field name="priority" widget="priority" options="{'range': 4}" string="Rating" optional="show"/>
+        </xpath>
+    </field>
+</record>
 </odoo>
